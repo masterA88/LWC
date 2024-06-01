@@ -1,0 +1,17 @@
+<template>
+    <lightning-card title={title} icon-name="standard:event">
+        <div class="scheduler-container">
+            <template for:each={days} for:item="day">
+                <div key={day.id} class="scheduler-day" ondrop={handleDrop} ondragover={allowDrop} data-day={day.id}>
+                    <div class="day-title">{day.name}</div>
+                    <!-- Display tasks -->
+                    <template for:each={day.tasks} for:item="task">
+                        <div key={task.id} draggable="true" ondragstart={handleDragStart} data-id={task.id} class="task">
+                            {task.name}
+                        </div>
+                    </template>
+                </div>
+            </template>
+        </div>
+    </lightning-card>
+</template>

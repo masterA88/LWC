@@ -1,0 +1,28 @@
+<template>
+    <lightning-card title="Lead Capture Form" icon-name="standard:lead">
+        <div class="slds-m-around_medium">
+            <lightning-input label="First Name" 
+                             value={firstName} 
+                             onchange={handleInputChange} 
+                             data-field="firstName">
+            </lightning-input>
+            <lightning-input label="Last Name" 
+                             value={lastName} 
+                             onchange={handleInputChange} 
+                             data-field="lastName">
+            </lightning-input>
+            <lightning-input label="Company" 
+                             value={company} 
+                             onchange={handleInputChange} 
+                             data-field="company">
+            </lightning-input>
+            <!-- Add additional fields here -->
+
+            <lightning-button label="Submit" 
+                              variant="brand" 
+                              onclick={submitForm} 
+                              class="slds-m-top_medium">
+            </lightning-button>
+        </div>
+    </lightning-card>
+</template>

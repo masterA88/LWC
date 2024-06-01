@@ -1,0 +1,9 @@
+<template>
+    <lightning-card title="Super Marketing Twitter Post Creator" icon-name="custom:custom14">
+        <div class="slds-m-around_medium">
+            <lightning-input name="recordId" label="Record ID" value={recordId} onchange={handleInput}></lightning-input>
+            <lightning-input name="topic" label="Topic" value={topic} onchange={handleInput}></lightning-input>            
+            <lightning-button label="Generate Post" title="Generate Post" onclick={generatePost} class="slds-m-top_medium"></lightning-button>
+        </div>
+    </lightning-card>
+</template>

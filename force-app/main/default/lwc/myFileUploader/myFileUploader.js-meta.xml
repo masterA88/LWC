@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata" fqn="myFileUploader">
+    <apiVersion>59.0</apiVersion>
+    <isExposed>true</isExposed>
+    <targets>
+        <target>lightning__AppPage</target>
+        <target>lightning__RecordPage</target>
+        <target>lightning__HomePage</target>
+        <!-- If you intend to use the component in Lightning Communities, include these:
+        <target>lightningCommunity__Page</target>
+        <target>lightningCommunity__Default</target>
+        -->
+    </targets>
+    <targetConfigs>
+        <targetConfig targets="lightning__RecordPage">
+            <objects>
+                <object>Account</object> <!-- Example: Account object -->
+                <object>Contact</object> <!-- Example: Contact object -->
+                <!-- Add other specific object API names as needed -->
+            </objects>
+        </targetConfig>
+        <!-- Remove or comment out the following targetConfig if not using the component in Lightning Communities
+        <targetConfig targets="lightningCommunity__Page, lightningCommunity__Default">
+            <property name="someProperty" type="String" label="Some Property" description="This is a sample property."/>
+        </targetConfig>
+        -->
+    </targetConfigs>
+</LightningComponentBundle>

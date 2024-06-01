@@ -1,0 +1,24 @@
+<template>
+    <lightning-card title="Public Transport Data" icon-name="custom:custom63">
+        <div class="slds-m-around_medium">
+            <template if:true={datasets}>
+                <template for:each={datasets} for:item="dataset">
+                    <div key={dataset._uniqueKey} class="slds-box slds-m-bottom_small">
+                        <p><strong>Name:</strong> {dataset.name}</p>
+                        <p><strong>Title:</strong> {dataset.title}</p>
+                        <p><strong>Schedules:</strong> {dataset.schedules}</p>
+                        <p><strong>Routes:</strong> {dataset.routes}</p>
+                    </div>
+                </template>
+            </template>
+            
+            <template if:true={error}>
+                <p class="slds-text-color_error">Error retrieving data: {error}</p>
+            </template>
+            
+            <template if:false={datasets.length}>
+                <p>No data available.</p>
+            </template>
+        </div>
+    </lightning-card>
+</template>

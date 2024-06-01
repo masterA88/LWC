@@ -1,0 +1,18 @@
+<template>
+    <lightning-card title="Create a New Lead" icon-name="standard:lead">
+        <div class="slds-m-around_medium">
+            <lightning-input label="First Name" value={firstName} onchange={handleInputChange} data-field="FirstName"></lightning-input>
+            <lightning-input label="Last Name" value={lastName} onchange={handleInputChange} data-field="LastName"></lightning-input>
+            <lightning-input label="Company" value={company} onchange={handleInputChange} data-field="Company"></lightning-input>
+            <lightning-input label="Email" value={email} onchange={handleInputChange} data-field="Email"></lightning-input>
+            <lightning-input label="Phone" value={phone} onchange={handleInputChange} data-field="Phone"></lightning-input>
+            <lightning-input label="Title" value={title} onchange={handleInputChange} data-field="Title"></lightning-input>
+            <lightning-input label="Street" value={street} onchange={handleInputChange} data-field="Street"></lightning-input>
+            <lightning-input label="City" value={city} onchange={handleInputChange} data-field="City"></lightning-input>
+            <lightning-input label="State" value={state} onchange={handleInputChange} data-field="State"></lightning-input>
+            <lightning-input label="Country" value={country} onchange={handleInputChange} data-field="Country"></lightning-input>
+            <lightning-input label="Zip" value={zip} onchange={handleInputChange} data-field="PostalCode"></lightning-input>
+            <lightning-button label="Submit" variant="brand" class="slds-m-top_medium" onclick={submitForm}></lightning-button>
+        </div>
+    </lightning-card>
+</template>

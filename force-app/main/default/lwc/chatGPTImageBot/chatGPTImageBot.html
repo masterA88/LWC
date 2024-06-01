@@ -1,0 +1,12 @@
+<template>
+    <lightning-card title="ChatGPT Image Bot" icon-name="custom:custom14">
+        <div class="slds-m-around_medium">
+            <lightning-textarea label="Your Message" onchange={handleMessageChange}></lightning-textarea>
+            <lightning-input type="file" label="Upload Image" name="fileUploader" accept=".jpg,.jpeg,.png" onchange={handleImageUpload}></lightning-input>
+            <div if:true={imagePreview}>
+                <img src={imagePreview} />
+            </div>
+            <lightning-button label="Send to ChatGPT" title="Send" onclick={sendRequest} class="slds-m-top_small"></lightning-button>
+        </div>
+    </lightning-card>
+</template>

@@ -1,0 +1,14 @@
+<template>
+    <lightning-card title="Case File Search" icon-name="standard:case">
+        <lightning-input label="Search Files" value={searchTerm} onchange={handleSearchTermChange}></lightning-input>
+        <lightning-button label="Search" onclick={handleSearch}></lightning-button>
+        <template if:true={searchResults.length}>
+            <lightning-datatable
+                data={searchResults}
+                columns={columns}
+                key-field="Id"
+                onrowaction={handleRowAction}>
+            </lightning-datatable>
+        </template>
+    </lightning-card>
+</template>

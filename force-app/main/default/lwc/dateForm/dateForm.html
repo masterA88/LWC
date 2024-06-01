@@ -1,0 +1,16 @@
+<template>
+    <lightning-card title="Date and Day Form" icon-name="custom:custom14">
+        <div class="slds-m-around_medium">
+            <lightning-input type="date" label="Enter Date" value={dateValue} onchange={handleDateChange}></lightning-input>
+            
+            <p class="slds-m-top_small">Selected Date: {dateValue}</p>
+            <p class="slds-m-top_small">Day of the Week: {dayOfWeek}</p>
+
+            <template if:true={errorMessage}>
+                <div class="slds-text-color_error">{errorMessage}</div>
+            </template>
+
+            <lightning-button label="Submit" onclick={handleSubmit} class="slds-m-top_medium"></lightning-button>
+        </div>
+    </lightning-card>
+</template>

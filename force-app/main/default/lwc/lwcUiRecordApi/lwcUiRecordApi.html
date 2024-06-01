@@ -1,0 +1,16 @@
+<template>
+    <lightning-card title="Create Account record using Lightning/UIRecordApi" icon-name="standard:account" variant="base">
+        <div class="slds-p-horizontal_small">
+            <lightning-input type="text" label="Name" name="accName" onchange={handleInput}></lightning-input>
+        </div>
+        <div class="slds-p-horizontal_small">
+            <lightning-combobox name="rating" label="Rating" value={selectedRating} placeholder="Select Rating" options={accRatingPicklist} onchange={picklistHandleChange}></lightning-combobox>
+        </div>
+        <div class="slds-p-horizontal_small">
+            <lightning-combobox name="industry" label="Industry" value={selectedIndustry} placeholder="Select Industry" options={accIndustryPicklist} onchange={picklistHandleChange}></lightning-combobox>
+        </div>
+        <div class="slds-p-horizontal_small">
+            <lightning-button label="Create Account" variant="brand" onclick={createAccount}></lightning-button>
+        </div>
+    </lightning-card>
+</template>

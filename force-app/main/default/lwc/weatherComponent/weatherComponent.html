@@ -1,0 +1,19 @@
+<template>
+    <lightning-card title="Weather Data for San Francisco, California, USA" icon-name="custom:custom63" class="weather-card">
+        <div class="slds-m-around_medium">
+            <template if:true={weatherData}>
+                <div class="weather-info">
+                    <p>Location: San Francisco, California, USA</p>
+                    <p>Temperature: {weatherData.temp}</p>
+                </div>
+                <div class="weather-info">
+                    <p>Conditions: {weatherData.description}</p>
+                </div>
+                <!-- Add more data fields as needed -->
+            </template>
+            <template if:true={error}>
+                <p>Error fetching data: {error}</p>
+            </template>
+        </div>
+    </lightning-card>
+</template>
